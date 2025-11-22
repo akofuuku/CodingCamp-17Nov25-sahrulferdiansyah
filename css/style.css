@@ -37,6 +37,11 @@ nav.main-nav a{color:var(--muted);text-decoration:none;font-weight:600}
 /* LOGO-SVG */
 .logo-svg{width:36px;height:36px;}
 
+/* Biar Scroll Smooth */
+html {
+  scroll-behavior: smooth;
+}
+
 /* HERO */
 main.hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;margin-top:28px}
 
