@@ -357,6 +357,13 @@ textarea {
   }
 }
 
+@media (max-width: 600px) {
+  .submit-btn {
+    margin-top: 18px;
+  }
+}
+
+
 .gender-wrap {
   display: flex;
   gap: 20px;
