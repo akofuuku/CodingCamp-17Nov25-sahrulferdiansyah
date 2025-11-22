@@ -356,7 +356,7 @@ textarea {
     width: 100%;
   }
 }
-
+/* Submit biar ga dempet */
 @media (max-width: 600px) {
   .submit-btn {
     margin-top: 18px;
