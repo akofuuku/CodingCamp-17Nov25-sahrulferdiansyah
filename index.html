@@ -1,26 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sahrul F — Portfolio</title>
 
-    <!-- CSS External -->
-     <link rel="stylesheet" href="/css/style.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
-    
-    <!-- Header -->
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+  <div class="site">
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+      <div class="brand">
+        <img src="/img/logo.svg" alt="Logo Sahrul" class="logo-svg">
+        <span class="name">Sahrul.</span>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#porfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+     <div class="social-links">
+        <a href="https://github.com/akofuuku" target="_blank" aria-label="GitHub">
+         <img src="/img/github.svg" alt="GitHub Logo" class="icon">
+    </a>
+
+        <a href="https://linkedin.com/in/sahrulferdiansyah" target="_blank" aria-label="LinkedIn">
+        <img src="/img/linkedin.svg" alt="LinkedIn Logo" class="icon">
+        </a>
+    </div>
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <main class="hero" id="home">
+      
+      <section class="hero-intro" aria-labelledby="hero-heading">
+        <span class="kicker">Haloo!</span>
+
+        <h1 id="hero-heading">
+          I’m <span class="name">Sahrul Ferdiansyah</span>,<br>
+          Graphic Designer <br>
+          Based in Indonesia.
+        </h1>
+
+        <p class="lead">
+          I’m an experienced Graphic Designer with 2+ years in the field,
+          collaborating with Retail companies and startups.
+        </p>
+
+        <div class="actions">
+          <button class="btn-primary">View My Portfolio</button>
+          <button class="btn-outline">Hire Me</button>
+        </div>
+
+        <div class="features">
+          <div>Fyler Design</div>
+          <div>Packaging Design</div>
+          <div>Logo Design</div>
+          <div>UI/UX</div>
+        </div>
+      </section>
+
+      <!-- IMAGE AREA -->
+      <aside class="hero-visual" aria-hidden="true">
+        <div class="img-card">
+          <img src="/img/img.png" alt="Sahrul Portrait">
+
+          <span class="badge role">Graphic Designer</span>
+          <span class="badge tag">Software Engineer</span>
+        </div>
+      </aside>
+
+    </main>
+
+  </div>
 
 </body>
 </html>

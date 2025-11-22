@@ -1,0 +1,151 @@
+/* Portfolio Hero CSS (external file) */
+:root{
+  --green:#234d33;
+  --accent:#f0a925;
+  --muted:#6b6b6b;
+  --bg:#ffffff;
+  --max-width:1100px;
+  --radius:24px;
+  --container-pad:28px;
+  --shadow: 0 6px 18px rgba(35,77,51,0.08);
+  font-family: Inter, 'Segoe UI', Roboto, -apple-system, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:#fff;color:#111}
+
+.site{
+  max-width:var(--max-width);
+  margin:28px auto;
+  padding:var(--container-pad);
+}
+
+header.site-header{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 20px;border-radius:var(--radius);background:#fff;
+  box-shadow:var(--shadow);
+}
+
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{width:36px;height:36px;border-radius:50%;background:var(--accent);display:inline-block;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+.brand .name{font-weight:700;color:var(--green)}
+
+nav.main-nav{display:flex;gap:55px;font-size:large;:center}
+nav.main-nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.cta{padding:8px 14px;border-radius:999px;border:2px solid var(--green);background:#fff;color:var(--green);font-weight:700}
+
+/* LOGO-SVG */
+.logo-svg{width:36px;height:36px;}
+
+/* HERO */
+main.hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;margin-top:28px}
+
+.hero-intro{padding:20px}
+.kicker{display:inline-block;border:2px solid #f2e6d5;padding:6px 10px;border-radius:6px;font-weight:700;color:var(--muted);background:#fff}
+
+h1{font-size:40px;line-height:1.05;margin:18px 0;color:#111}
+h1 .name{color:var(--accent);font-weight:800}
+p.lead{color:#666;max-width:60%;margin:0 0 18px}
+
+.actions{display:flex;gap:12px;align-items:center;margin-top:12px}
+.btn-primary{background:var(--green);color:#fff;padding:12px 18px;border-radius:12px;border:none;font-weight:700;cursor:pointer}
+.btn-outline{background:transparent;border:2px solid #ddd;padding:10px 16px;border-radius:10px;cursor:pointer}
+
+/* image card */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+.img-card{background:var(--accent);border-radius:999px;padding:18px 18px 8px 18px;box-shadow:var(--shadow);position:relative}
+.img-card img{display:block;width:320px;height:auto;border-radius:500px;object-fit:cover}
+
+/* badges */
+.badge{position:absolute;padding:6px 10px;border-radius:999px;font-weight:700;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,0.08);}
+.badge.role{right:5px;top:5px}
+.badge.tag{left:12px;bottom:18px}
+
+/* features strip */
+.features{margin-top:20px;background:var(--accent);padding:14px;border-radius:12px;display:flex;gap:18px;justify-content:space-around;color:#ffffff;font-weight:700}
+
+/* responsive */
+@media (max-width:980px){
+  main.hero{grid-template-columns:1fr;}
+  p.lead{max-width:100%}
+  .hero-visual{order:-1;margin-bottom:8px}
+}
+
+@media (max-width:480px){
+  h1{font-size:28px}
+  .brand .name{display:none}
+  header.site-header{padding:12px}
+  .img-card img{width:260px}
+}
+
+/* ============================
+   ANIMATION KEYFRAMES
+============================ */
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ============================
+   APPLY ANIMATION
+============================ */
+
+/* Judul */
+.hero-intro h1 {
+  opacity: 0;
+  animation: popup 0.7s ease-out forwards;
+}
+
+/* Lead paragraph */
+.hero-intro .lead {
+  opacity: 0;
+  animation: popup 0.7s ease-out 0.15s forwards;
+}
+
+/* Buttons */
+.actions {
+  opacity: 0;
+  animation: popup 0.7s ease-out 0.3s forwards;
+}
+
+/* Foto / Hero Visual */
+.hero-visual {
+  opacity: 0;
+  animation: slideRight 0.8s ease-out 0.4s forwards;
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.social-links .icon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.85;
+  transition: 0.2s ease-in-out;
+}
+
+.social-links .icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
